@@ -5,11 +5,12 @@ from aiogram import Bot, Dispatcher
 from aiogram.client.default import DefaultBotProperties
 
 from settings import BOT_TOKEN
-from telegram import admin_router
+from telegram import admin_router, router_commands
 
 dp = Dispatcher()
 dp.include_routers(
     admin_router,
+    router_commands,
 )
 
 
